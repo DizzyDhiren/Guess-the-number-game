@@ -1,9 +1,10 @@
-const submitBtn = document.getElementById("submit");
+
+
  
 
 document.addEventListener("DOMContentLoaded", function() {
     let hint = document.getElementById("hint");
-   
+    
 });
 
 
@@ -30,10 +31,18 @@ function submitGuess(){
 
 function youWin(){
     let hiddenNumber = document.getElementById("random-number");
+    let playAgainBtn = document.getElementById("playAgain");
+    let submitBtn = document.getElementById("submit");
     console.log(hiddenNumber);
     hiddenNumber.innerHTML = `${randomNumber}`
     hint.innerHTML = "YOU WIN";
+    submitBtn.style.display = "none";
+    playAgainBtn.style.display = "block";
 
+}
+
+function playAgain(){
+    window.location.reload()
 }
 
 
